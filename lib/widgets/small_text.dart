@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:infinitegleam/utils/colors.dart';
+import 'package:infinitegleam/utils/dimension.dart';
 
 class SmallText extends StatelessWidget {
   const SmallText(
@@ -23,7 +23,7 @@ class SmallText extends StatelessWidget {
         color: color,
         fontFamily: 'Roboto',
         fontWeight: FontWeight.w500,
-        fontSize: size.sp,
+        fontSize: Dimensions.responsiveHeight(size),
       ),
     );
   }

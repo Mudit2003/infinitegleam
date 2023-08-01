@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:infinitegleam/utils/colors.dart';
+import 'package:infinitegleam/utils/dimension.dart';
 import 'package:infinitegleam/widgets/big_text.dart';
 import 'package:infinitegleam/widgets/small_text.dart';
 
@@ -9,10 +10,10 @@ class FoodPageLocationAndOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      const BigText(
+      BigText(
         'India',
         color: AppColors.mainColor,
-        size: 30,
+        size: Dimensions.responsiveWidth(30),
       ),
       Row(
         children: [

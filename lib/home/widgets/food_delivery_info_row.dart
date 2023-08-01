@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:infinitegleam/utils/colors.dart';
+import 'package:infinitegleam/utils/dimension.dart';
 import 'package:infinitegleam/widgets/icon_and_text_row.dart';
 
 class FoodDeliveryInfoRow extends StatelessWidget {

@@ -1,10 +1,10 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:infinitegleam/home/widgets/food_page_body/bloc/food_page_body_bloc.dart';
 import 'package:infinitegleam/home/widgets/food_page_body/widget/body_widgets.dart';
 import 'package:infinitegleam/utils/colors.dart';
+import 'package:infinitegleam/utils/dimension.dart';
 
 class FoodPageBody extends StatefulWidget {
   const FoodPageBody({super.key});
@@ -39,8 +39,9 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         // ignore: sized_box_for_whitespace
         return Column(
           children: [
+            // here I can use a fractionally sized box for better code
             Container(
-              height: 320.h,
+              height: Dimensions.responsiveHeight(320),
               child: PageView.builder(
                 controller: _pageController,
                 itemCount: 5,
@@ -49,15 +50,21 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 },
               ),
             ),
+
             DotsIndicator(
               dotsCount: 5,
-              position: context.read<FoodPageBodyBloc>().state.page.floor(),
+              position:
+                  (context.read<FoodPageBodyBloc>().state.page + 0.5).floor(),
               decorator: DotsDecorator(
                 activeColor: AppColors.mainColor,
-                size: Size.square(9.h),
-                activeSize: Size(18.w, 9.h),
+                size: Size.square(Dimensions.responsiveHeight(5)),
+                activeSize: Size(
+                  Dimensions.responsiveHeight(18),
+                  Dimensions.responsiveWidth(9),
+                ),
                 activeShape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5.r),
+                  borderRadius:
+                      BorderRadius.circular(Dimensions.responsiveHeight(10)),
                 ),
               ),
             )

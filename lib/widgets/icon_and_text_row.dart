@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:infinitegleam/utils/dimension.dart';
 import 'package:infinitegleam/widgets/small_text.dart';
 
 class IconAndTextWidget extends StatelessWidget {
@@ -17,7 +17,7 @@ class IconAndTextWidget extends StatelessWidget {
     return Row(
       children: [
         Icon(icon, color: iconColor),
-        SizedBox(width: 5.h),
+        SizedBox(width: Dimensions.responsiveWidth(5)),
         SmallText(
           text,
         )

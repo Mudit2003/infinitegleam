@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:infinitegleam/utils/colors.dart';
+import 'package:infinitegleam/utils/dimension.dart';
 
 class BigText extends StatelessWidget {
   const BigText(
@@ -23,7 +23,7 @@ class BigText extends StatelessWidget {
       style: TextStyle(
         color: color,
         fontFamily: 'Roboto',
-        fontSize: size.sp,
+        fontSize: Dimensions.responsiveHeight(size),
         overflow: overflow,
       ),
     );

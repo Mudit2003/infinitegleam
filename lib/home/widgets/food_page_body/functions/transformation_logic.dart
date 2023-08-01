@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:infinitegleam/utils/dimension.dart';
 
 Matrix4 scaleAndPositionTransform(
     {required int index,
     required double currPageValue,
-    double height = 250,
+    double height = 320,
     double scaleFactor = 0.8}) {
-  height = height.h;
+  height = Dimensions.responsiveHeight(height);
   Matrix4 matrix = Matrix4.identity();
   if (index == currPageValue.floor()) {
     double currScale = 1 - (currPageValue - index) * (1 - scaleFactor);

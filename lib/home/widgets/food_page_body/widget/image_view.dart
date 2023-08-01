@@ -1,26 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:infinitegleam/utils/colors.dart';
+import 'package:infinitegleam/utils/dimension.dart';
 
 class FoodItemImageView extends StatelessWidget {
   /// widget to display the image of the cuisine
   const FoodItemImageView({
     super.key,
     required this.index,
-    required this.height,
   });
   final int index;
-  final double height;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height.h,
+      height: Dimensions.responsiveHeight(220),
       margin: EdgeInsets.only(
-        left: 10.w,
-        right: 10.w,
+        left: Dimensions.responsiveWidth(10),
+        right: Dimensions.responsiveWidth(10),
       ), // this margin creates empty space between the page view
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30.r),
+          borderRadius: BorderRadius.circular(Dimensions.responsiveHeight(20)),
           color: index.isEven ? AppColors.mainColor : const Color(0xFF9294cc),
           image: const DecorationImage(
             fit: BoxFit.cover,

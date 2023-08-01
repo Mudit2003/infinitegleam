@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:infinitegleam/utils/colors.dart';
 import 'package:infinitegleam/widgets/small_text.dart';
 
@@ -15,7 +14,7 @@ class FeedbackRow extends StatelessWidget {
             5,
             (index) => Icon(
               Icons.star,
-              size: 15.sp,
+              size: 15,
               color: AppColors.mainColor,
             ),
           ),

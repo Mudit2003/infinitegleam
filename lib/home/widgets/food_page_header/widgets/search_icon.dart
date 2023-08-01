@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:infinitegleam/utils/colors.dart';
+import 'package:infinitegleam/utils/dimension.dart';
 
 class FoodPageSearchIcon extends StatelessWidget {
   const FoodPageSearchIcon({super.key});
@@ -9,10 +9,10 @@ class FoodPageSearchIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        height: 45.h,
-        width: 45.w,
+        height: Dimensions.responsiveHeight(45),
+        width: Dimensions.responsiveWidth(45),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15.h),
+          borderRadius: BorderRadius.circular(Dimensions.responsiveHeight(15)),
           color: AppColors.mainColor,
         ),
         child: const Icon(
